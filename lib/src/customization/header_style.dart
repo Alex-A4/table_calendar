@@ -26,10 +26,10 @@ class HeaderStyle {
   final TextStyle titleTextStyle;
 
   /// Style for FormatButton Text.
-  final TextStyle formatButtonTextStyle;
+  final Color formatButtonColor;
 
-  /// Background Decoration for FormatButton.
-  final Decoration formatButtonDecoration;
+  /// Size of FormatButton Icon
+  final double formatButtonSize;
 
   /// Inside Padding for FormatButton.
   final EdgeInsets formatButtonPadding;
@@ -59,11 +59,8 @@ class HeaderStyle {
     this.formatButtonVisible = true,
     this.titleTextBuilder,
     this.titleTextStyle = const TextStyle(fontSize: 17.0),
-    this.formatButtonTextStyle = const TextStyle(),
-    this.formatButtonDecoration = const BoxDecoration(
-      border: const Border(top: BorderSide(), bottom: BorderSide(), left: BorderSide(), right: BorderSide()),
-      borderRadius: const BorderRadius.all(Radius.circular(12.0)),
-    ),
+    this.formatButtonColor = Colors.black,
+    this.formatButtonSize = 25.0,
     this.formatButtonPadding = const EdgeInsets.symmetric(horizontal: 10.0, vertical: 4.0),
     this.leftChevronPadding = const EdgeInsets.all(12.0),
     this.rightChevronPadding = const EdgeInsets.all(12.0),

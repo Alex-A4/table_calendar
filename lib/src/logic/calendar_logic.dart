@@ -3,6 +3,7 @@
 
 import 'package:date_utils/date_utils.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 
 import '../../table_calendar.dart';
 
@@ -16,14 +17,14 @@ class CalendarLogic {
   double get dx => _dx;
   CalendarFormat get calendarFormat => _calendarFormat.value;
   List<DateTime> get visibleDays => _visibleDays.value;
-  String get formatButtonText => _availableCalendarFormats[_nextFormat()];
+  IconData get formatButtonText => _availableCalendarFormats[_nextFormat()];
 
   DateTime _focusedDay;
   DateTime _selectedDay;
   StartingDayOfWeek _startingDayOfWeek;
   ValueNotifier<CalendarFormat> _calendarFormat;
   ValueNotifier<List<DateTime>> _visibleDays;
-  Map<CalendarFormat, String> _availableCalendarFormats;
+  Map<CalendarFormat, IconData> _availableCalendarFormats;
   DateTime _previousFirstDay;
   DateTime _previousLastDay;
   int _pageId;

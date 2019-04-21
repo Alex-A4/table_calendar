@@ -291,8 +291,6 @@ class _TableCalendarState extends State<TableCalendar>
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SizedBox(width: 20.0),
-
             Text(
               widget.headerStyle.titleTextBuilder != null
                   ? widget.headerStyle.titleTextBuilder(
@@ -300,11 +298,8 @@ class _TableCalendarState extends State<TableCalendar>
                   : DateFormat.yMMMM(widget.locale).format(
                   _calendarLogic.focusedDay),
               style: widget.headerStyle.titleTextStyle,
-              textAlign: widget.headerStyle.centerHeaderTitle
-                  ? TextAlign.center
-                  : TextAlign.start,
+              textAlign: TextAlign.center,
             ),
-            SizedBox(width: 8.0),
             widget.headerStyle.formatButtonVisible &&
                 widget.availableCalendarFormats.length > 1 &&
                 widget.forcedCalendarFormat == null
@@ -324,6 +319,7 @@ class _TableCalendarState extends State<TableCalendar>
 
     return Row(
       mainAxisSize: MainAxisSize.max,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: children,
     );
   }

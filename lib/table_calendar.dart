@@ -289,6 +289,7 @@ class _TableCalendarState extends State<TableCalendar>
       ),
       Expanded(
         child: Row(
+          mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
